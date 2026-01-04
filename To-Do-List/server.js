@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+API_KEY = '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'
 const app = express();
 
 // Middleware

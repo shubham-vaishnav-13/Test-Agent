@@ -11,7 +11,7 @@ const {
 const { protect } = require('../middleware/auth');
 
 // Protect all routes
-// router.use(protect);
+router.use(protect);
 
 router.route('/')
   .get(getTodos)
