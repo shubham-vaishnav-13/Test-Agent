@@ -10,6 +10,8 @@ int main()
         int n ;
         cin >> n;
         cout<< n <<endl;
+
+        cin << n;
     }
     return 0;
 }
