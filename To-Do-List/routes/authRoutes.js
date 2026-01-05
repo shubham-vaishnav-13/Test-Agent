@@ -6,7 +6,6 @@ const { logout, refreshToken, updateUser, forgotPassword, resetPassword } = requ
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/me', protect, getMe);
 
 
 router.post('/forgot-password', forgotPassword);
