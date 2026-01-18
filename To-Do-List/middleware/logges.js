@@ -1,10 +1,5 @@
-const fs = require('fs');
-const path = require('path');
-
-'use strict';
 
 
-const logFile = path.join(__dirname, '..', 'logs', 'requests.log');
 
 
 ensureLogDir();
