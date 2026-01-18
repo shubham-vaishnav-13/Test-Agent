@@ -6,12 +6,6 @@ const path = require('path');
 
 const logFile = path.join(__dirname, '..', 'logs', 'requests.log');
 
-function ensureLogDir() {
-    const dir = path.dirname(logFile);
-    if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-    }
-}
 
 ensureLogDir();
 

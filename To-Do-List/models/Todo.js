@@ -1,22 +1,7 @@
 const mongoose = require('mongoose');
 
 const todoSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  },
-  title: {
-    type: String,
-    required: [true, 'Please provide a title'],
-    trim: true,
-    maxlength: [100, 'Title cannot exceed 100 characters']
-  },
-  description: {
-    type: String,
-    trim: true,
-    maxlength: [500, 'Description cannot exceed 500 characters']
-  },
+
   status: {
     type: String,
     enum: ['pending', 'in-progress', 'completed'],
