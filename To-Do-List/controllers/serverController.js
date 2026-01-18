@@ -1,29 +1,12 @@
 const http = require('http');
 const mongoose = require('mongoose');
 
-/**
- * /controllers/serverController.js
- *
- * Simple server controller to start/stop an Express app and optional MongoDB connection.
- * Usage:
- *   const { startServer, stopServer } = require('./controllers/serverController');
- *   startServer(app, { port: 3000, mongoUri: process.env.MONGO_URI });
- */
-
 require('dotenv').config();
 
 let _server = null;
 let _app = null;
 
-/**
- * Start the HTTP server and optionally connect to MongoDB.
- * @param {import('express').Application} app - Express app instance
- * @param {Object} [opts]
- * @param {number|string} [opts.port] - Port to listen on (default: process.env.PORT || 3000)
- * @param {string} [opts.mongoUri] - MongoDB connection string (optional)
- * @param {function} [opts.onStarted] - Callback invoked after server starts
- * @returns {Promise<http.Server>}
- */
+
 async function startServer(app, opts = {}) {
     if (!app) throw new Error('Express app instance is required');
 
