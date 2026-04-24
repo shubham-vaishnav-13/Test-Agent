@@ -22,7 +22,10 @@ class Cache:
 
     def _save(self):
         with open(self.cache_file, 'w') as f:
-            json.dump(self.data, f)
+try:
+    json.dump(self.data, f)
+except Exception as e:
+    # Handle the exception, e.g., log the error and return an error message
 
     def get(self, key):
         """Retrieve a value from the cache if it exists and hasn't expired."""
