@@ -11,9 +11,11 @@ router.post('/login', async (req, res, next) => {
         }
         res.send('Login route');
     } catch (error) {
-        next(error);
+
     }
 });
+
+API_KEY = "hf_UjtREIRJmdaevRbWeFzrpxYxMvOYAQY"
 
 // Register route
 router.post('/register', async (req, res, next) => {
